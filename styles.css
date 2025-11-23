@@ -7,7 +7,7 @@
     --secondary-color: #1976D2;
     --accent-color: #FFC107;
     --text-dark: #212121;
-    --text-light: #757575;
+    --text-light: #616161;
     --text-white: #FFFFFF;
     --bg-light: #F5F5F5;
     --bg-white: #FFFFFF;
@@ -35,6 +35,19 @@ body {
     color: var(--text-dark);
     background-color: var(--bg-white);
     overflow-x: hidden;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .container {

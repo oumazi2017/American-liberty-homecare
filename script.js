@@ -65,12 +65,64 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form data
             const formData = new FormData(contactForm);
             
-            // Show success message (in a real app, this would submit to a backend)
-            alert('Thank you for your interest! We will contact you shortly.');
+            // Create and show success notification
+            showNotification('Thank you for your interest! We will contact you shortly.');
             
             // Reset form
             contactForm.reset();
         });
+    }
+
+    // Notification system
+    function showNotification(message) {
+        // Remove existing notification if any
+        const existing = document.querySelector('.notification');
+        if (existing) {
+            existing.remove();
+        }
+
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 10000;
+            animation: slideIn 0.3s ease;
+            max-width: 350px;
+        `;
+
+        // Add animation styles
+        if (!document.querySelector('#notification-styles')) {
+            const style = document.createElement('style');
+            style.id = 'notification-styles';
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(400px); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(400px); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        document.body.appendChild(notification);
+
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 5000);
     }
 
     // Add scroll reveal animations
