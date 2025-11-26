@@ -65,7 +65,7 @@ git init
 Add the remote repository:
 
 ```bash
-git remote add origin https://github.com/YOUR-USERNAME/Homecare-website-repository.git
+git remote add origin https://github.com/American-Liberty/Homecare-website-repository.git
 ```
 
 **Important**: Replace `YOUR-USERNAME` with your actual GitHub username!
@@ -99,7 +99,7 @@ git add .
 Commit with a message:
 
 ```bash
-git commit -m "Initial commit: American Home Care Services website"
+git commit -m "Initial commit: American Liberty Home Care Services and staffing website"
 ```
 
 ---

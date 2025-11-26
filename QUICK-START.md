@@ -17,7 +17,7 @@ cd /Users/ochubaudeagha/Desktop/American-liberty-homecare
 git init
 
 # Add your GitHub repository (REPLACE YOUR-USERNAME!)
-git remote add origin https://github.com/YOUR-USERNAME/Homecare-website-repository.git
+git remote add origin https://github.com/American-Liberity/Homecare-website-repository.git
 
 # Add all files
 git add .
@@ -32,7 +32,7 @@ git push -u origin main
 
 ### Step 3: Enable GitHub Pages
 
-1. Go to: `https://github.com/YOUR-USERNAME/Homecare-website-repository`
+1. Go to: `https://github.com/American-Liberity/Homecare-website-repository`
 2. Click **Settings** → **Pages**
 3. Under **Branch**, select **main** and **/ (root)**
 4. Click **Save**
@@ -42,7 +42,7 @@ git push -u origin main
 
 Your site will be live at:
 ```
-https://YOUR-USERNAME.github.io/Homecare-website-repository/
+https://American-Liberty.github.io/Homecare-website-repository/
 ```
 
 ---
